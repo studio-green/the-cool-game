@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק 3D מאתגר</title>
+    <link rel="stylesheet" href="first-time-code.css">
+</head>
+<body>
+    <!-- תפריט בחירת משחק -->
+    <div id="gameMenu">
+        <h1>בחר משחק</h1>
+        <button class="menuButton" id="trophyGameButton">משחק הגביע</button>
+        <button class="menuButton" id="originalGameButton">המשחק הרגיל</button>
+        <button class="menuButton" id="scoreboardButton">לוח תוצאות</button>
+        <button class="menuButton yellow" id="upgradeMenuMainButton">שדרוגים</button>
+    </div>
+
+    <!-- חלון לוח התוצאות -->
+    <div id="scoreboardOverlay">
+        <div id="scoreboard">
+            <h2>לוח תוצאות</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>שם השחקן</th>
+                        <th>משחק הגביע</th>
+                        <th>המשחק הרגיל</th>
+                    </tr>
+                </thead>
+                <tbody id="scoreboardBody"></tbody>
+            </table>
+            <button id="closeScoreboardButton">סגור</button>
+        </div>
+    </div>
+
+    <!-- שדה קלט לשם השחקן והתחלת המשחק -->
+    <div id="nameInputContainer" class="hidden" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+        <input type="text" id="nameInput" placeholder="הכנס את שמך" style="padding: 10px; font-size: 18px; border-radius: 5px; border: none; width: 200px;">
+        <br>
+        <button id="startGameButton" style="padding: 10px 20px; font-size: 18px; margin-top: 10px; border-radius: 5px; border: none; background-color: #4CAF50; color: white; cursor: pointer;">התחל משחק</button>
+    </div>
+
+    <!-- כפתורי HUD והשליטה -->
+    <div id="hud" class="hidden">
+        שם: <span id="playerNameDisplay"></span> | חיים: <span id="health">100</span> | שלב: <span id="stage">1</span> | מטבעות: <span id="coins">0</span>
+    </div>
+
+    <div id="upgradeMenu">
+        <h3>תפריט שדרוגים</h3>
+        <button id="upgradeSpeed">שדרוג מהירות (עלות: 20 מטבעות)</button>
+        <button id="upgradeHealth">שדרוג חיים (עלות: 30 מטבעות)</button>
+        <button id="upgradeDamage">שדרוג נזק (עלות: 40 מטבעות)</button>
+        <button id="upgradeMenuBackButton">חזרה</button>
+    </div>
+
+    <button id="whatsappShare" class="hidden">שתף ב-WhatsApp</button>
+    <button id="backToMenuButton" class="hidden">חזרה לתפריט</button>
+
+    <!-- כפתורי שליטה במגע -->
+    <div id="touchControls">
+        <div class="touchButton" id="moveLeft">◀</div>
+        <div class="touchButton" id="moveForward">▲</div>
+        <div class="touchButton" id="moveBackward">▼</div>
+        <div class="touchButton" id="moveRight">▶</div>
+        <div class="touchButton" id="jump">⤒</div>
+        <div class="touchButton" id="lookLeft">⟲</div>
+        <div class="touchButton" id="lookRight">⟳</div>
+        <div class="touchButton" id="shoot">●</div>
+    </div>
+    
+    <!-- ספריית Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="first-time-code.js">
+
+    </script>
+</body>
+</html>

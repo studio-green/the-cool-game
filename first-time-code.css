@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+canvas {
+    display: block;
+}
+#gameMenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+.menuButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+.menuButton:hover {
+    background-color: #45a049;
+}
+.menuButton.yellow { 
+    background-color: #FFEB3B; 
+    color: #000; 
+}
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    z-index: 1;
+}
+#upgradeMenu {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    display: none;
+    z-index: 1;
+}
+#upgradeMenu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#upgradeMenu button:hover {
+    background-color: #45a049;
+}
+#upgradeMenuBackButton {
+    background-color: #f44336;
+    color: white;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+#upgradeMenuBackButton:hover {
+    background-color: #d32f2f;
+}
+#whatsappShare {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+#whatsappShare:hover {
+    background-color: #1DA851;
+}
+#backToMenuButton {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+#backToMenuButton:hover {
+    background-color: #d32f2f;
+}
+.hidden {
+    display: none;
+}
+#touchControls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* יופיע רק במכשירים ניידים */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 600px;
+    z-index: 1;
+}
+.touchButton {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    user-select: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+.touchButton:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#scoreboardOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+#scoreboard {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    color: white;
+    text-align: center;
+}
+#scoreboard h2 {
+    margin-top: 0;
+}
+#scoreboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+#scoreboard th, #scoreboard td {
+    border: 1px solid #555;
+    padding: 8px;
+}
+#scoreboard th {
+    background-color: #444;
+}
+#closeScoreboardButton {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+#closeScoreboardButton:hover {
+    background-color: #d32f2f;
+}
